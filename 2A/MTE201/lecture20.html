@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../../pandoc.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="../../flowchart.min.js"></script>
+</head>
+<body>
+<div id="TOC">
+<ul>
+<li><a href="#systematic-and-random-errors">Systematic and Random Errors</a><ul>
+<li><a href="#error-types">Error Types</a></li>
+<li><a href="#notation">Notation</a></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="systematic-and-random-errors">Systematic and Random Errors</h1>
+<h2 id="error-types">Error Types</h2>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li>Non-linearity (systematic)</li>
+<li>Hysteresis (systematic)
+<ul>
+<li>different values for increasing/decreasing load</li>
+</ul></li>
+<li>non-repeatability (random)</li>
+</ol>
+<div class="figure">
+<img src="./res/lecture20-1.jpg" />
+
+</div>
+</blockquote>
+<h2 id="notation">Notation</h2>
+<blockquote>
+<p>Systematic Error - <span class="math inline">\(B_x\)</span><br />
+- independent of sample size</p>
+<p>Random Error - <span class="math inline">\(P_\overline{x}\)</span><br />
+- depends on sample size through the t distribution</p>
+</blockquote>
+<blockquote>
+<p><span class="math display">\[P_{\overline{x}} = \pm t \cdot \frac{s_x}{\sqrt{n}}\]</span> where<br />
+i. <span class="math inline">\(t\)</span> is the t value for 95% confidence<br />
+ii. <span class="math inline">\(S_x\)</span> is the sample standard dev.<br />
+iii. <span class="math inline">\(n\)</span> is the sample size</p>
+</blockquote>
+</body>
+</html>

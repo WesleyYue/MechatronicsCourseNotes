@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../../pandoc.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="../../flowchart.min.js"></script>
+</head>
+<body>
+<div id="TOC">
+<ul>
+<li><a href="#chapter-4.5-variation-of-parameters-4.6-in-book">Chapter 4.5 Variation of Parameters (4.6 in book)</a><ul>
+<li><a href="#muc-but-for-variable-coefficients">MUC, but for <strong>variable</strong> coefficients</a></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="chapter-4.5-variation-of-parameters-4.6-in-book">Chapter 4.5 Variation of Parameters (4.6 in book)</h1>
+<h3 id="muc-but-for-variable-coefficients">MUC, but for <strong>variable</strong> coefficients</h3>
+<blockquote>
+<p>To solve a 2<sup>nd</sup> order ODE: <span class="math inline">\(\quad y&#39;&#39; + p(t)y&#39; + q(t)y = F(t)\)</span> <span class="math display">\[
+y_{general} = y_{homogeneous} + y_{particular} \\
+y_h(t) = c_1y_1(t) + c_2y_2(t)\\
+y_p(t) = v_1(t)y_1(t) + v_2(t)y_2(t)
+\]</span> To find <span class="math inline">\(y_1\)</span> and <span class="math inline">\(y_2\)</span>, use aux. equations.<br />
+To find <span class="math inline">\(v_1(t)\)</span> and <span class="math inline">\(v_2(t)\)</span>, solve the system: <span class="math display">\[
+y_1v_1&#39; + y_2v_2&#39; = 0 \\
+y_1&#39;v_1&#39; + y_2&#39;v_2&#39; = \frac{f}{a}
+\]</span> <small><em><span class="math inline">\(a\)</span> here is the coefficient for the second order term in the ODE, however, it seems in JP Hickey’s notes the second order term coefficient is always 1. The variable coefficients only seem to be for the first and zeroth order term (<span class="math inline">\(p(t)\)</span> and <span class="math inline">\(q(t)\)</span>).</em></small></p>
+</blockquote>
+<blockquote>
+<h4 id="method-of-variation-of-parameters">Method of Variation of Parameters</h4>
+<p>For a <span class="math inline">\(2^{nd}\)</span> order ODE: <span class="math display">\[ay&#39;&#39; + by&#39; + cy = f\]</span></p>
+<p><strong>a)</strong> Find linearly independent solutions <span class="math inline">\(\{y_1(t), y_2(t)\}\)</span> to the homogenous equation <span class="math display">\[ay&#39;&#39; + by&#39; + cy = 0\]</span> <strong>b)</strong> Determine <span class="math inline">\(v_1(t)\)</span> and <span class="math inline">\(v_2(t)\)</span> by solving: <span class="math display">\[
+v_1(t) = \int\frac{-f(t)y_2(t)}{a[y_1(t)y_2&#39;(t) - y_1&#39;(t)y_2(t)]}dt \quad(1)
+\\
+v_2(t) = \int\frac{f(t)y_1(t)}{a[y_1(t)y_2&#39;(t) - y_1&#39;(t)y_2(t)]}dt \quad (2)
+\]</span> <em><small>Can drop constant terms from integrating since you only need one solution. (See textbook; Hickey does this in a roundabout way in his notes by collecting all the terms and redefining the constant coefficients.) </small></em> <strong>c)</strong> Solve <span class="math inline">\(y_p(t) = v_1(t)y_1(t) + v_2(t)y_2(t)\)</span> for <span class="math inline">\(y_p(t)\)</span></p>
+</blockquote>
+<blockquote>
+<p>Helpful Identities <span class="math display">\[
+cos^2x + sin^2x = 1 \quad (1)\\
+tan\theta = \frac{\sin\theta}{\cos\theta} \quad (2)\\
+\int sec(t) = ln|sec(t) + tan(t)| + C\\ 
+\int tan(t) = ln|sec(t)| +C
+\]</span></p>
+</blockquote>
+<blockquote>
+<p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
+</blockquote>
+</body>
+</html>

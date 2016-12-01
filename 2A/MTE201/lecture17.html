@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../../pandoc.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="../../flowchart.min.js"></script>
+</head>
+<body>
+<div id="TOC">
+<ul>
+<li><a href="#lecture-17---measuring-temperature">Lecture 17 - Measuring Temperature</a><ul>
+<li><a href="#different-temperature-measurement-devices">Different Temperature Measurement Devices</a></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="lecture-17---measuring-temperature">Lecture 17 - Measuring Temperature</h1>
+<p>A measurement system consists of</p>
+<pre class="flow"><code>st=&gt;start: Measurand
+sensor=&gt;operation: Sensor
+op2=&gt;operation: Signal Modification System
+op3=&gt;operation: Indicator or Recorder
+e=&gt;end: Value
+st-&gt;sensor-&gt;op2-&gt;op3-&gt;e</code></pre>
+<div class="figure">
+<img src="./res/lecture17-1.jpg" />
+
+</div>
+<hr />
+<h4 id="ex.-thermometer"><strong>ex.</strong> thermometer</h4>
+<p><strong>Sensor</strong>: thermal expansion/contraction of liquid as function of temp. <strong>Signal Modification System</strong>: Small diameter tube connected to fluid reservoir <strong>Indicator</strong>: Scale on tube</p>
+<hr />
+<h3 id="different-temperature-measurement-devices">Different Temperature Measurement Devices</h3>
+<table>
+<colgroup>
+<col width="26%" />
+<col width="18%" />
+<col width="29%" />
+<col width="26%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>Device</p></td>
+<td><p>Sensor</p></td>
+<td><p>Signal Modification System</p></td>
+<td><p>Indicator</p></td>
+</tr>
+<tr class="even">
+<td><p>Thermocouple</p></td>
+<td><p>Thermocouple Junction</p></td>
+<td><p>Voltage <span class="math inline">\(\rightarrow\)</span> Temperature</p></td>
+<td><p>Digital Readout</p></td>
+</tr>
+<tr class="odd">
+<td><p>Resistance Temperature Detectors</p></td>
+<td><p>Resistor</p></td>
+<td><p>Resistance <span class="math inline">\(\rightarrow\)</span> Temperature</p></td>
+<td><p>Digital Readout</p></td>
+</tr>
+<tr class="even">
+<td><p>Thermistor</p></td>
+<td><p>Semi-Conductor Device</p></td>
+<td><p>Resistance <span class="math inline">\(\rightarrow\)</span> Temperature</p></td>
+<td><ul>
+<li>Large Size (vs. thermocouple)</li>
+<li>non-linear</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+<p>.</p>
+<table>
+<colgroup>
+<col width="22%" />
+<col width="27%" />
+<col width="18%" />
+<col width="31%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>Device</p></td>
+<td><p>Accuracy</p></td>
+<td><p>Advantages</p></td>
+<td><p>Limitation</p></td>
+</tr>
+<tr class="even">
+<td><p>Thermocouple</p></td>
+<td><p><span class="math inline">\(\pm 0.5^oC - 1.0^oC\)</span> for sensor <span class="math inline">\(\pm 0.5^oC - 2.0^oC\)</span> for instrument</p></td>
+<td><ul>
+<li>small</li>
+<li>cheap</li>
+<li>wide application range</li>
+</ul></td>
+<td><ul>
+<li>non-linear</li>
+<li>accuracy depends on instrument quality</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td><p>Resistance Temperature Detectors</p></td>
+<td><p><span class="math inline">\(\pm 0.3^oC\)</span> <span class="math inline">\(\pm\)</span> small errors for V,I measurements</p></td>
+<td><ul>
+<li>Highly accurate</li>
+<li>linear</li>
+</ul></td>
+<td><ul>
+<li>Expensive</li>
+<li>Large sensor size, leads to loading errors</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><p>Thermistor</p></td>
+<td><p>Up to <span class="math inline">\(\pm 0.1^oC\)</span></p></td>
+<td><ul>
+<li>Low cost</li>
+<li>Easy to implement</li>
+</ul></td>
+<td><ul>
+<li>Large Size (vs. thermocouple)</li>
+<li>non-linear</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

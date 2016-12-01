@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../../pandoc.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="../../flowchart.min.js"></script>
+</head>
+<body>
+<div id="TOC">
+<ul>
+<li><a href="#chapter-4.4-method-of-undetermined-coefficients">Chapter 4.4: Method of Undetermined Coefficients</a></li>
+</ul>
+</div>
+<h1 id="chapter-4.4-method-of-undetermined-coefficients">Chapter 4.4: Method of Undetermined Coefficients</h1>
+<p>To find a particular solution to the differential equation: <span class="math display">\[ay&#39;&#39; + by&#39; + cy = Ct^me^{rt}\]</span> where <span class="math inline">\(m\)</span> is a non-negative int., use the form <span class="math display">\[y_p(t) = t^s(A_mt^m + \cdots + A_1t + A_0)e^{rt}\]</span> with<br />
+(<em>i</em>) <span class="math inline">\(s = 0\)</span> if <span class="math inline">\(r\)</span> is not a root of the associated auxiliary equation. (ie. 2 complex roots)<br />
+(<em>ii</em>) <span class="math inline">\(s = 1\)</span> if <span class="math inline">\(r\)</span> is a simple root (ie. there’s only one root)<br />
+(<em>iii</em>) <span class="math inline">\(s = 2\)</span> if <span class="math inline">\(r\)</span> is a double root (ie. 2 real roots)</p>
+<hr />
+<p>To find a particular solution to the differential equation</p>
+<p><span class="math display">\[ay&#39;&#39; + by&#39; + cy = Ct^me^{\alpha t}cos\beta t \\
+or \\
+ay&#39;&#39; + by&#39; + cy = Ct^me^{\alpha t}sin\beta t\]</span></p>
+<p>for <span class="math inline">\(\beta \neq 0\)</span>, use the form <span class="math display">\[
+\begin{align}
+    y_p(t) &amp;= t^s(A_mt^m + \cdots + A_1t + A_0)e^{\alpha t}cos\beta t \\
+    &amp;\quad+ t^s(B_mt^m + \ldots + B_1t + B_0)e^{\alpha t} sin\beta t
+\end{align}
+\]</span></p>
+<p>with<br />
+(<em>iv</em>) <span class="math inline">\(s = 0\)</span> if <span class="math inline">\(\alpha + i\beta\)</span> is not a root of the aux. equation.<br />
+(<em>iv</em>) <span class="math inline">\(s = 1\)</span> if <span class="math inline">\(\alpha + i\beta\)</span> is a root of the aux. equation.</p>
+</body>
+</html>

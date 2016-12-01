@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../../pandoc.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="../../flowchart.min.js"></script>
+</head>
+<body>
+<div id="TOC">
+<ul>
+<li><a href="#experimental-uncertainty">Experimental Uncertainty</a></li>
+</ul>
+</div>
+<h1 id="experimental-uncertainty">Experimental Uncertainty</h1>
+<blockquote>
+<p>statistical analysis:</p>
+<ul>
+<li>experimental uncertainty based on <span class="math inline">\(\overline{x}, s\)</span><br />
+</li>
+<li>requires experiment to be ran first</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Validity of measurement</p>
+<ul>
+<li>measure of how close the output of a measurement system matches the real value</li>
+<li><span class="math inline">\(error = value_{measured} - value_{true}\)</span></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Uncertainty</p>
+<p>Estimate a measurement with some limits of error<br />
+ex. <span class="math inline">\(V = 100V \pm 1V\)</span></p>
+</blockquote>
+<blockquote>
+<p>Error (Uncertainty) has two categories:</p>
+<ol style="list-style-type: decimal">
+<li>Systematic</li>
+</ol>
+<ul>
+<li>fixed, bias error</li>
+<li>sources
+<ol style="list-style-type: lower-roman">
+<li>Calibration</li>
+<li>Loading error (intrusive measurment device)</li>
+<li>Spatial error (affected by enviornment)</li>
+</ol></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Random</li>
+</ol>
+<ul>
+<li>Lack of repeatibility, random noise, uncontrolled variables</li>
+</ul>
+<div class="figure">
+<img src="./res/lecture19-1.jpg" />
+
+</div>
+</blockquote>
+<blockquote>
+<p>General method for solving uncertainty questions involving multiple var</p>
+<ol style="list-style-type: decimal">
+<li>Differentiate results</li>
+<li>Take root mean square of the uncertainty result</li>
+</ol>
+<p>General uncertainty formula <span class="math inline">\(w_R = [(w_1 \cdot \frac{\partial R}{\partial x_1})^2 + (w_2 \cdot \frac{\partial R}{\partial x_2})^2 + \cdots + (w_n \cdot \frac{\partial R}{\partial x_n})^2]^{\frac{1}{2}}\)</span></p>
+</blockquote>
+<blockquote>
+<p>If <span class="math inline">\(R = Cx_1^2x_2^b \cdots x_n^N\)</span></p>
+<p><span class="math display">\[\frac{\partial R}{\partial x_1} = aCx_1^{a-1}x_2^b \cdots x_n^N = a\frac{R}{x^1}\]</span></p>
+<p><span class="math display">\[\frac{\partial R}{\partial x_2} = bCx_1^{a}x_2^{b-1} \cdots x_n^N  = b\frac{R}{x^2}\]</span></p>
+<p><span class="math display">\[\frac{W_r}{R} = [( w_1 \cdot \frac{a}{x_1} )^2 + ( w_2 \cdot \frac{b}{x_2} )^2 + \cdots + ( w_n \cdot \frac{N}{x_n} )^2 ]^{\frac{1}{2}}\]</span></p>
+</blockquote>
+</body>
+</html>
