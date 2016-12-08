@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../../pandoc.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="../../flowchart.min.js"></script>
+</head>
+<body>
+<div id="TOC">
+<ul>
+<li><a href="#ch-4.10-forced-mechanical-vibrations">Ch 4.10 Forced Mechanical Vibrations</a></li>
+</ul>
+</div>
+<h1 id="ch-4.10-forced-mechanical-vibrations">Ch 4.10 Forced Mechanical Vibrations</h1>
+<blockquote>
+<p>For a cosine forcing function on a mass-spring system <span class="math display">\[m\frac{d^2y}{dt^2} + b\frac{dy}{dt} + ky = F_0 \cos{\gamma t}\]</span> Solution for <span class="math inline">\(0 &lt; b^2 &lt; 4mk\)</span></p>
+<p><span class="math display">\[y(t) = \underbrace{Ae^{-(b/2m)t} \sin(\frac{\sqrt{4mk - b^2}}{2m}t + \phi)}_{y_h,\text{ (transient)}} + \underbrace{\frac{F_0}{\sqrt{(k-m\gamma^2)^2 + b^2\gamma^2}}\sin(\gamma t + \theta)}_{y_p, \text{ (steady-state)}}\]</span></p>
+<p>Factor in the steady state is called frequency or gain factor <span class="math inline">\(M(\gamma)\)</span> <span class="math display">\[\frac{1}{\sqrt{(k-m\gamma^2)^2 + b^2\gamma^2}}\]</span></p>
+<div class="figure">
+<img src="./res/ch4.10-1.jpg" />
+
+</div>
+</blockquote>
+<blockquote>
+<h2 id="frequency-response-curve">Frequency Response Curve</h2>
+<p>Graphing <span class="math inline">\(M(\gamma)\)</span> with fixed <span class="math inline">\(m, b, k\)</span> is called the <strong><em>frequency response curve</em></strong> or <strong><em>resonance curve</em></strong> <small><em>As <span class="math inline">\(\gamma \rightarrow \infty\)</span>, <span class="math inline">\(M(\gamma) \rightarrow 0\)</span> since the inertia limits how it can respond to extremely rapid vibraitons</em></small><br />
+<img src="./res/ch4.10-2.jpg" /></p>
+</blockquote>
+</body>
+</html>

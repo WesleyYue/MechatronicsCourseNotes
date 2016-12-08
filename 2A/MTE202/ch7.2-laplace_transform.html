@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../../pandoc.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="../../flowchart.min.js"></script>
+</head>
+<body>
+<div id="TOC">
+<ul>
+<li><a href="#ch.-7.2-laplace-transform">Ch. 7.2 Laplace Transform</a><ul>
+<li><a href="#linearity">Linearity</a></li>
+<li><a href="#jump-discontinuity">Jump Discontinuity</a></li>
+<li><a href="#laplace-transform-of-high-order-derivatives">Laplace Transform of High Order Derivatives</a></li>
+<li><a href="#translation-in-s">Translation in <span class="math inline">\(s\)</span></a></li>
+<li><a href="#laplace-transforms-table">Laplace Transforms Table</a></li>
+<li><a href="#helpful-integral-formulas">Helpful integral formulas</a></li>
+<li><a href="#laplace-transform-table">Laplace Transform Table</a></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="ch.-7.2-laplace-transform">Ch. 7.2 Laplace Transform</h1>
+<blockquote>
+<p>The laplace transform of <span class="math inline">\(f\)</span> is <span class="math display">\[ F(s) := \int_{0}^{\infty} e^{-st} f(t) dt \]</span></p>
+</blockquote>
+<h2 id="linearity">Linearity</h2>
+<blockquote>
+<p>The Laplace Transform is <em>linear</em> <span class="math display">\[ \mathscr{L}\{f_1 + f_2\} = \mathscr{L}\{f_1\} + \mathscr{L}\{f_2\} \]</span> <span class="math display">\[ \mathscr{L}\{cf_1\} = c\mathscr{L}\{f_1\} \]</span></p>
+</blockquote>
+<h2 id="jump-discontinuity">Jump Discontinuity</h2>
+<blockquote>
+<p><span class="math inline">\(f(t)\)</span> is said to have a <em>jump discontinuity</em> at <span class="math inline">\(t_0 \in (a, b)\)</span> if <span class="math inline">\(f(t)\)</span> is discontinuous at <span class="math inline">\(t_0\)</span> but the one-sided limits <span class="math display">\[\lim{t\to t_0^-} f(t) and \lim{t\to t_0^+} f(t)\]</span> exists as <em>finite</em> numbers.<br />
+If the discontinuity occurs at an endpoint, <span class="math inline">\(t_0 = a \ (or \ b)\)</span>, a jump discontinuity occurs if the one sided limit of <span class="math inline">\(f(t)\)</span> as <span class="math inline">\(t\to a^+ or\ (t \to b^-)\)</span> exists as a <em>finite</em> number.</p>
+</blockquote>
+<h2 id="laplace-transform-of-high-order-derivatives">Laplace Transform of High Order Derivatives</h2>
+<blockquote>
+<p><span class="math display">\[ \mathscr{L}\{f^{(n)}\}(s) = s^n\mathscr{L}\{f\}(s) - s^{n-1}f(0) - s^{n-2}f&#39;(0) - \cdots - f^{(n - 1)}(0) \]</span></p>
+</blockquote>
+<h2 id="translation-in-s">Translation in <span class="math inline">\(s\)</span></h2>
+<blockquote>
+<p><span class="math display">\[ 
+\begin{align*}
+\mathscr{L}(e^{at}f) &amp;= \int_0^{\infty} e^{-st} e^{at} f(t) dt \\
+&amp;= \int_0^{\infty} e^{(a-s)t} f(t) dt \\
+&amp;= F(s-a)
+\end{align*}
+\]</span></p>
+</blockquote>
+<h2 id="laplace-transforms-table">Laplace Transforms Table</h2>
+<blockquote>
+<div class="figure">
+<img src="./res/ch7-1.jpg" />
+
+</div>
+</blockquote>
+<h2 id="helpful-integral-formulas">Helpful integral formulas</h2>
+<blockquote>
+<p><span class="math display">\[\int e^{bx}cos(ax)dx = e^{bx}\frac{a sin(ax) + b cos (ax)}{a^2 + b^2}\]</span> <span class="math display">\[\int e^{bx}sin(ax)dx = e^{bx}\frac{b sin(ax) - a cos(ax)}{a^2 + b^2}\]</span></p>
+</blockquote>
+<h2 id="laplace-transform-table">Laplace Transform Table</h2>
+<p>http://tutorial.math.lamar.edu/pdf/Laplace_Table.pdf</p>
+</body>
+</html>
