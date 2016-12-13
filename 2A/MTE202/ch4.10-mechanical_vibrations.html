@@ -18,9 +18,13 @@
 </div>
 <h1 id="ch-4.10-forced-mechanical-vibrations">Ch 4.10 Forced Mechanical Vibrations</h1>
 <blockquote>
-<p>For a cosine forcing function on a mass-spring system <span class="math display">\[m\frac{d^2y}{dt^2} + b\frac{dy}{dt} + ky = F_0 \cos{\gamma t}\]</span> Solution for <span class="math inline">\(0 &lt; b^2 &lt; 4mk\)</span></p>
-<p><span class="math display">\[y(t) = \underbrace{Ae^{-(b/2m)t} \sin(\frac{\sqrt{4mk - b^2}}{2m}t + \phi)}_{y_h,\text{ (transient)}} + \underbrace{\frac{F_0}{\sqrt{(k-m\gamma^2)^2 + b^2\gamma^2}}\sin(\gamma t + \theta)}_{y_p, \text{ (steady-state)}}\]</span></p>
-<p>Factor in the steady state is called frequency or gain factor <span class="math inline">\(M(\gamma)\)</span> <span class="math display">\[\frac{1}{\sqrt{(k-m\gamma^2)^2 + b^2\gamma^2}}\]</span></p>
+<p>For a cosine forcing function on a mass-spring system <span class="math display">\[m\frac{d^2y}{dt^2} + b\frac{dy}{dt} + ky = F_0 \cos{\gamma t}\]</span> Solution for <span class="math inline">\(0 &lt; b^2 &lt; 4mk\)</span><br />
+<span class="math display">\[y(t) = \underbrace{Ae^{-(b/2m)t} \sin(\frac{\sqrt{4mk - b^2}}{2m}t + \phi)}_{y_h,\text{ (transient)}} + \underbrace{\frac{F_0}{\sqrt{(k-m\gamma^2)^2 + b^2\gamma^2}}\sin(\gamma t + \theta)}_{y_p, \text{ (steady-state)}}\]</span></p>
+</blockquote>
+<blockquote>
+<p>Factor in the steady state is called frequency or gain factor <span class="math inline">\(M(\gamma)\)</span> <span class="math display">\[M(\gamma) = \frac{1}{\sqrt{(k-m\gamma^2)^2 + b^2\gamma^2}}\]</span></p>
+</blockquote>
+<blockquote>
 <div class="figure">
 <img src="./res/ch4.10-1.jpg" />
 
@@ -30,6 +34,9 @@
 <h2 id="frequency-response-curve">Frequency Response Curve</h2>
 <p>Graphing <span class="math inline">\(M(\gamma)\)</span> with fixed <span class="math inline">\(m, b, k\)</span> is called the <strong><em>frequency response curve</em></strong> or <strong><em>resonance curve</em></strong> <small><em>As <span class="math inline">\(\gamma \rightarrow \infty\)</span>, <span class="math inline">\(M(\gamma) \rightarrow 0\)</span> since the inertia limits how it can respond to extremely rapid vibraitons</em></small><br />
 <img src="./res/ch4.10-2.jpg" /></p>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\(\omega_0^2 = \frac{k}{m}\)</span> where <span class="math inline">\(\omega_0\)</span> is the angular frequency or natural frequency (rad/s) <span class="math display">\[\frac{\omega_0}{2\pi} =  \]</span></p>
 </blockquote>
 </body>
 </html>
