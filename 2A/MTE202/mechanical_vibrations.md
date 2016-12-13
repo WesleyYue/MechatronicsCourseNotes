@@ -73,7 +73,7 @@ m_1x_1'' + (k_1+k_2)x_1 - k_2x_2 = F_1
 $$
 > Mass 2
 > $$m_2x_2'' = F_2 - k_2(x_2-x_1)\\
-m_2x_2'' + k_2x_2 - k_1x_1 = F_2$$
+m_2x_2'' + k_2x_2 - k_2x_1 = F_2$$
 
 # Gaussian Elimination
 

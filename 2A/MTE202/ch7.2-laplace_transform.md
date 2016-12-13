@@ -4,6 +4,22 @@
 > The laplace transform of $f$ is
 > $$ F(s) := \int_{0}^{\infty} e^{-st} f(t) dt $$
 
+## Existance of Laplace Transform for a function
+
+> LT exists for f(t) if it is  
+>
+> 1. Piecewise Continuous  
+> 2. Exponential Order
+
+> Piecewise contiuous if:  
+>
+> 1. Has finite number of jump discontinuities  
+> 2. f(t) approaches finite limit at each discontinuity
+
+> Exponential Order of $\alpha$ if it does not grow faster than $e^{\alpha t}$:
+> $$|f(t)| \leq Me^{\alpha t} \quad\text{for all } t \geq T$$
+> <small>where $M, T$ are positive constants</small>
+
 ## Linearity
 
 > The Laplace Transform is *linear*
@@ -30,6 +46,24 @@
 					 &= F(s-a)
 \end{align*}
 $$
+
+## Partial Fractions
+
+> ex.  
+> $$\frac{x^2+15}{(x+3)^2(x^2+3)} = \frac{A_1}{x+3} + \frac{A_2}{(x+3)^2} + \frac{Bx+C}{x^2+3}$$
+
+> $$
+\begin{align}
+\frac{As+B}{as^2 + bs +c} &= \frac{\frac{A}{s}s + \frac{B}{a}}{s^2 + \frac{b}{a}s + \frac{c}{a}} \\
+&= \frac{E(s-\alpha) + D\beta}{(s-\alpha)^2 + \beta^2}
+\end{align}
+$$  
+> where  
+>
+> * $\alpha = -\frac{b}{2a}$  
+> * $\beta = \frac{\sqrt{4ac-b^2}}{2a}$
+>
+> Then inverse each term to $e^{\alpha t}\cos(bt)$ and $e^{at}\sin(bt)$
 
 ## Laplace Transforms Table
 

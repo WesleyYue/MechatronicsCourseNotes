@@ -14,10 +14,12 @@
 <div id="TOC">
 <ul>
 <li><a href="#ch.-7.2-laplace-transform">Ch. 7.2 Laplace Transform</a><ul>
+<li><a href="#existance-of-laplace-transform-for-a-function">Existance of Laplace Transform for a function</a></li>
 <li><a href="#linearity">Linearity</a></li>
 <li><a href="#jump-discontinuity">Jump Discontinuity</a></li>
 <li><a href="#laplace-transform-of-high-order-derivatives">Laplace Transform of High Order Derivatives</a></li>
 <li><a href="#translation-in-s">Translation in <span class="math inline">\(s\)</span></a></li>
+<li><a href="#partial-fractions">Partial Fractions</a></li>
 <li><a href="#laplace-transforms-table">Laplace Transforms Table</a></li>
 <li><a href="#helpful-integral-formulas">Helpful integral formulas</a></li>
 <li><a href="#laplace-transform-table">Laplace Transform Table</a></li>
@@ -27,6 +29,26 @@
 <h1 id="ch.-7.2-laplace-transform">Ch. 7.2 Laplace Transform</h1>
 <blockquote>
 <p>The laplace transform of <span class="math inline">\(f\)</span> is <span class="math display">\[ F(s) := \int_{0}^{\infty} e^{-st} f(t) dt \]</span></p>
+</blockquote>
+<h2 id="existance-of-laplace-transform-for-a-function">Existance of Laplace Transform for a function</h2>
+<blockquote>
+<p>LT exists for f(t) if it is</p>
+<ol style="list-style-type: decimal">
+<li>Piecewise Continuous<br />
+</li>
+<li>Exponential Order</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>Piecewise contiuous if:</p>
+<ol style="list-style-type: decimal">
+<li>Has finite number of jump discontinuities<br />
+</li>
+<li>f(t) approaches finite limit at each discontinuity</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>Exponential Order of <span class="math inline">\(\alpha\)</span> if it does not grow faster than <span class="math inline">\(e^{\alpha t}\)</span>: <span class="math display">\[|f(t)| \leq Me^{\alpha t} \quad\text{for all } t \geq T\]</span> <small>where <span class="math inline">\(M, T\)</span> are positive constants</small></p>
 </blockquote>
 <h2 id="linearity">Linearity</h2>
 <blockquote>
@@ -50,6 +72,26 @@ If the discontinuity occurs at an endpoint, <span class="math inline">\(t_0 = a 
 &amp;= F(s-a)
 \end{align*}
 \]</span></p>
+</blockquote>
+<h2 id="partial-fractions">Partial Fractions</h2>
+<blockquote>
+<p>ex.<br />
+<span class="math display">\[\frac{x^2+15}{(x+3)^2(x^2+3)} = \frac{A_1}{x+3} + \frac{A_2}{(x+3)^2} + \frac{Bx+C}{x^2+3}\]</span></p>
+</blockquote>
+<blockquote>
+<p><span class="math display">\[
+\begin{align}
+\frac{As+B}{as^2 + bs +c} &amp;= \frac{\frac{A}{s}s + \frac{B}{a}}{s^2 + \frac{b}{a}s + \frac{c}{a}} \\
+&amp;= \frac{E(s-\alpha) + D\beta}{(s-\alpha)^2 + \beta^2}
+\end{align}
+\]</span><br />
+where</p>
+<ul>
+<li><span class="math inline">\(\alpha = -\frac{b}{2a}\)</span><br />
+</li>
+<li><span class="math inline">\(\beta = \frac{\sqrt{4ac-b^2}}{2a}\)</span></li>
+</ul>
+<p>Then inverse each term to <span class="math inline">\(e^{\alpha t}\cos(bt)\)</span> and <span class="math inline">\(e^{at}\sin(bt)\)</span></p>
 </blockquote>
 <h2 id="laplace-transforms-table">Laplace Transforms Table</h2>
 <blockquote>
