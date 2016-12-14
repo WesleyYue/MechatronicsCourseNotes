@@ -3,6 +3,7 @@
 
 > The laplace transform of $f$ is
 > $$ F(s) := \int_{0}^{\infty} e^{-st} f(t) dt $$
+> ![](./res/laplace_process.jpg)
 
 ## Existance of Laplace Transform for a function
 
@@ -54,7 +55,7 @@ $$
 
 > $$
 \begin{align}
-\frac{As+B}{as^2 + bs +c} &= \frac{\frac{A}{s}s + \frac{B}{a}}{s^2 + \frac{b}{a}s + \frac{c}{a}} \\
+\frac{As+B}{as^2 + bs +c} &= \frac{\frac{A}{a}s + \frac{B}{a}}{s^2 + \frac{b}{a}s + \frac{c}{a}} \\
 &= \frac{E(s-\alpha) + D\beta}{(s-\alpha)^2 + \beta^2}
 \end{align}
 $$  
@@ -64,6 +65,39 @@ $$
 > * $\beta = \frac{\sqrt{4ac-b^2}}{2a}$
 >
 > Then inverse each term to $e^{\alpha t}\cos(bt)$ and $e^{at}\sin(bt)$
+
+## Convolution
+
+> $$h(t) = (f * g)(t) = \int_{0}^{t} f(\tau)g(t-\tau)$$
+
+## Heaviside
+
+> $$
+M \cdot H(t-a) = \left\{
+        \begin{array}{ll}
+            0 & \quad t < a \\
+            M & \quad t > a
+        \end{array}
+    \right.
+$$
+> 
+> $$
+M \cdot (H(t-a) - H(t-b) = \left\{
+        \begin{array}{ll}
+            0 & \quad t < a \\
+            M & \quad a < t < b \\
+            0 & \quad b < t
+        \end{array}
+    \right.
+$$
+> ![](./res/rect_window.jpg)
+
+> $$
+\begin{align}
+\mathscr{L} \{H(t-a)f(t-a)\} &= e^{-as} \mathscr{L} \{f(t)\} \\
+\mathscr{L} \{H(t-a)f(t)\} &= e^{-as} \mathscr{L} \{f(t+a)\}
+\end{align}
+$$
 
 ## Laplace Transforms Table
 

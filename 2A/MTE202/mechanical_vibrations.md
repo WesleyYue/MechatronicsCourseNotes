@@ -3,21 +3,6 @@
 
 # Ch 4.9 Free Vibrations
 
-> For a cosine forcing function on a mass-spring system
-> $$m\frac{d^2y}{dt^2} + b\frac{dy}{dt} + ky = F_0 \cos{\gamma t}$$
-> Solution for $0 < b^2 < 4mk$  
-> $$y(t) = \underbrace{Ae^{-(b/2m)t} \sin(\frac{\sqrt{4mk - b^2}}{2m}t + \phi)}_{y_h,\text{ (transient)}} + \underbrace{\frac{F_0}{\sqrt{(k-m\gamma^2)^2 + b^2\gamma^2}}\sin(\gamma t + \theta)}_{y_p, \text{ (steady-state)}}$$
-
-> Factor in the steady state is called frequency or gain factor $M(\gamma)$
-> $$M(\gamma) = \frac{1}{\sqrt{(k-m\gamma^2)^2 + b^2\gamma^2}}$$  
-
-> ![](./res/ch4.10-1.jpg)
-
-> ## Frequency Response Curve
-> Graphing $M(\gamma)$ with fixed $m, b, k$ is called the ***frequency response curve*** or ***resonance curve***
-> <small>*As $\gamma \rightarrow \infty$, $M(\gamma) \rightarrow 0$ since the inertia limits how it can respond to extremely rapid vibraitons*</small>  
-> ![](./res/ch4.10-2.jpg)
-
 ## Undamped Free Vibration
 
 > <small>where $\omega_0$ is the angular frequency(rad/s)</small>
@@ -37,12 +22,12 @@
 
 > $$\frac{d^2x}{dt^2} + \frac{c}{m}\frac{dx}{dt} + \frac{k}{m}x = 0$$
 > Using aux. eq. 
-> $$r_{1,2} = -\frac{c}{2m} \pm \frac{sqrt(c^2 - 4km)}{2m}$$
+> $$r_{1,2} = -\frac{c}{2m} \pm \frac{\sqrt{c^2 - 4km}}{2m}$$
 
 ### Over-damped
 
 > $\frac{c^2}{m^2} - \frac{4k}{m} > 0$
-> $$x_g = \exp(-\frac{c}{2m}t)(c_1 \exp(\frac{\sqrt{c^2-4km}}{2m}t)) + c_2 \exp(-\frac{\sqrt{c^2-4km}}{2m}t))$$
+> $$x_g = e^{[-\frac{c}{2m}t]} \cdot c_1 e^{[\frac{\sqrt{c^2-4km}}{2m}t]} + c_2 \cdot e^{[-\frac{\sqrt{c^2-4km}}{2m}t]}$$
 
 ### Critical Damping
 
@@ -55,6 +40,22 @@
 > $$x_g = \exp(-\frac{c^2}{m^2}t)[c_1 \cos(\frac{\sqrt{4km-c^2}}{2m}t) + c_2 \sin(\frac{\sqrt{4km - c^2}}{2m}t)]$$
 
 # Ch. 4.10 Force Vibrations
+
+
+> For a cosine forcing function on a mass-spring system
+> $$m\frac{d^2y}{dt^2} + b\frac{dy}{dt} + ky = F_0 \cos{\gamma t}$$
+> Solution for $0 < b^2 < 4mk$  
+> $$y(t) = \underbrace{Ae^{-(b/2m)t} \sin(\frac{\sqrt{4mk - b^2}}{2m}t + \phi)}_{y_h,\text{ (transient)}} + \underbrace{\frac{F_0}{\sqrt{(k-m\gamma^2)^2 + b^2\gamma^2}}\sin(\gamma t + \theta)}_{y_p, \text{ (steady-state)}}$$
+
+> Factor in the steady state is called frequency or gain factor $M(\gamma)$
+> $$M(\gamma) = \frac{1}{\sqrt{(k-m\gamma^2)^2 + b^2\gamma^2}}$$  
+
+> ![](./res/ch4.10-1.jpg)
+
+> ## Frequency Response Curve
+> Graphing $M(\gamma)$ with fixed $m, b, k$ is called the ***frequency response curve*** or ***resonance curve***
+> <small>*As $\gamma \rightarrow \infty$, $M(\gamma) \rightarrow 0$ since the inertia limits how it can respond to extremely rapid vibraitons*</small>  
+> ![](./res/ch4.10-2.jpg)
 
 > $$mx'' + cx' + kx = F(t)$$
 

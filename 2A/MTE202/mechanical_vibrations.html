@@ -30,6 +30,38 @@
 </div>
 <h1 id="mechanical-vibrations">Mechanical Vibrations</h1>
 <h1 id="ch-4.9-free-vibrations">Ch 4.9 Free Vibrations</h1>
+<h2 id="undamped-free-vibration">Undamped Free Vibration</h2>
+<blockquote>
+<p><small>where <span class="math inline">\(\omega_0\)</span> is the angular frequency(rad/s)</small> <span class="math display">\[\frac{d^2x}{dt^2} + \omega^2x = 0\]</span></p>
+</blockquote>
+<blockquote>
+<p><span class="math display">\[ x_g = c_1cos(\omega t) + c_2 \sin(\omega t)\]</span> Using identity <span class="math display">\[ \sin(A + B) = \sin(A)\cos(B) + \cos(A)\sin(B)\]</span> <span class="math display">\[ x_g = \underbrace{E\cos(\phi)}_{c_1} \sin(\omega t) + \underbrace{E\sin(\phi)}_{c_2} \cos(\omega t)\]</span> <span class="math display">\[x_g = E\sin(\omega t + \phi)\]</span><br />
+where</p>
+<ul>
+<li><span class="math inline">\(E\)</span> is the amplitude</li>
+<li><span class="math inline">\(\phi\)</span> is the phase angle</li>
+<li><span class="math inline">\(\frac{2\pi}{\omega}\)</span> is the period</li>
+</ul>
+</blockquote>
+<h2 id="damped-free-vibration">Damped Free Vibration</h2>
+<blockquote>
+<p><span class="math display">\[\frac{d^2x}{dt^2} + \frac{c}{m}\frac{dx}{dt} + \frac{k}{m}x = 0\]</span> Using aux. eq. <span class="math display">\[r_{1,2} = -\frac{c}{2m} \pm \frac{\sqrt{c^2 - 4km}}{2m}\]</span></p>
+</blockquote>
+<h3 id="over-damped">Over-damped</h3>
+<blockquote>
+<p><span class="math inline">\(\frac{c^2}{m^2} - \frac{4k}{m} &gt; 0\)</span> <span class="math display">\[x_g = e^{[-\frac{c}{2m}t]} \cdot c_1 e^{[\frac{\sqrt{c^2-4km}}{2m}t]} + c_2 \cdot e^{[-\frac{\sqrt{c^2-4km}}{2m}t]}\]</span></p>
+</blockquote>
+<h3 id="critical-damping">Critical Damping</h3>
+<blockquote>
+<p><span class="math inline">\(\frac{c^2}{m^2} - \frac{4k}{m} = 0\)</span><br />
+<span class="math display">\[x_g = \exp(-\frac{c}{2m}t)(c_1 + c_2 t)\]</span></p>
+</blockquote>
+<h3 id="underdamped">Underdamped</h3>
+<blockquote>
+<p><span class="math inline">\(\frac{c^2}{m^2} - \frac{4k}{m} &lt; 0\)</span><br />
+<span class="math display">\[x_g = \exp(-\frac{c^2}{m^2}t)[c_1 \cos(\frac{\sqrt{4km-c^2}}{2m}t) + c_2 \sin(\frac{\sqrt{4km - c^2}}{2m}t)]\]</span></p>
+</blockquote>
+<h1 id="ch.-4.10-force-vibrations">Ch. 4.10 Force Vibrations</h1>
 <blockquote>
 <p>For a cosine forcing function on a mass-spring system <span class="math display">\[m\frac{d^2y}{dt^2} + b\frac{dy}{dt} + ky = F_0 \cos{\gamma t}\]</span> Solution for <span class="math inline">\(0 &lt; b^2 &lt; 4mk\)</span><br />
 <span class="math display">\[y(t) = \underbrace{Ae^{-(b/2m)t} \sin(\frac{\sqrt{4mk - b^2}}{2m}t + \phi)}_{y_h,\text{ (transient)}} + \underbrace{\frac{F_0}{\sqrt{(k-m\gamma^2)^2 + b^2\gamma^2}}\sin(\gamma t + \theta)}_{y_p, \text{ (steady-state)}}\]</span></p>
@@ -48,38 +80,6 @@
 <p>Graphing <span class="math inline">\(M(\gamma)\)</span> with fixed <span class="math inline">\(m, b, k\)</span> is called the <strong><em>frequency response curve</em></strong> or <strong><em>resonance curve</em></strong> <small><em>As <span class="math inline">\(\gamma \rightarrow \infty\)</span>, <span class="math inline">\(M(\gamma) \rightarrow 0\)</span> since the inertia limits how it can respond to extremely rapid vibraitons</em></small><br />
 <img src="./res/ch4.10-2.jpg" /></p>
 </blockquote>
-<h2 id="undamped-free-vibration">Undamped Free Vibration</h2>
-<blockquote>
-<p><small>where <span class="math inline">\(\omega_0\)</span> is the angular frequency(rad/s)</small> <span class="math display">\[\frac{d^2x}{dt^2} + \omega^2x = 0\]</span></p>
-</blockquote>
-<blockquote>
-<p><span class="math display">\[ x_g = c_1cos(\omega t) + c_2 \sin(\omega t)\]</span> Using identity <span class="math display">\[ \sin(A + B) = \sin(A)\cos(B) + \cos(A)\sin(B)\]</span> <span class="math display">\[ x_g = \underbrace{E\cos(\phi)}_{c_1} \sin(\omega t) + \underbrace{E\sin(\phi)}_{c_2} \cos(\omega t)\]</span> <span class="math display">\[x_g = E\sin(\omega t + \phi)\]</span><br />
-where</p>
-<ul>
-<li><span class="math inline">\(E\)</span> is the amplitude</li>
-<li><span class="math inline">\(\phi\)</span> is the phase angle</li>
-<li><span class="math inline">\(\frac{2\pi}{\omega}\)</span> is the period</li>
-</ul>
-</blockquote>
-<h2 id="damped-free-vibration">Damped Free Vibration</h2>
-<blockquote>
-<p><span class="math display">\[\frac{d^2x}{dt^2} + \frac{c}{m}\frac{dx}{dt} + \frac{k}{m}x = 0\]</span> Using aux. eq. <span class="math display">\[r_{1,2} = -\frac{c}{2m} \pm \frac{sqrt(c^2 - 4km)}{2m}\]</span></p>
-</blockquote>
-<h3 id="over-damped">Over-damped</h3>
-<blockquote>
-<p><span class="math inline">\(\frac{c^2}{m^2} - \frac{4k}{m} &gt; 0\)</span> <span class="math display">\[x_g = \exp(-\frac{c}{2m}t)(c_1 \exp(\frac{\sqrt{c^2-4km}}{2m}t)) + c_2 \exp(-\frac{\sqrt{c^2-4km}}{2m}t))\]</span></p>
-</blockquote>
-<h3 id="critical-damping">Critical Damping</h3>
-<blockquote>
-<p><span class="math inline">\(\frac{c^2}{m^2} - \frac{4k}{m} = 0\)</span><br />
-<span class="math display">\[x_g = \exp(-\frac{c}{2m}t)(c_1 + c_2 t)\]</span></p>
-</blockquote>
-<h3 id="underdamped">Underdamped</h3>
-<blockquote>
-<p><span class="math inline">\(\frac{c^2}{m^2} - \frac{4k}{m} &lt; 0\)</span><br />
-<span class="math display">\[x_g = \exp(-\frac{c^2}{m^2}t)[c_1 \cos(\frac{\sqrt{4km-c^2}}{2m}t) + c_2 \sin(\frac{\sqrt{4km - c^2}}{2m}t)]\]</span></p>
-</blockquote>
-<h1 id="ch.-4.10-force-vibrations">Ch. 4.10 Force Vibrations</h1>
 <blockquote>
 <p><span class="math display">\[mx&#39;&#39; + cx&#39; + kx = F(t)\]</span></p>
 </blockquote>
