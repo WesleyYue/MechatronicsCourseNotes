@@ -18,6 +18,7 @@ header-includes:
 >
 > Estimate a measurement with some limits of error  
 > ex. $V = 100V \pm 1V$
+> Convention is to use 95% confidence
 
 > Error (Uncertainty) has two categories:
 > 
@@ -40,10 +41,13 @@ header-includes:
 > General uncertainty formula
 > $w_R = [(w_1 \cdot \frac{\partial R}{\partial x_1})^2 + (w_2 \cdot \frac{\partial R}{\partial x_2})^2 + \cdots + (w_n \cdot \frac{\partial R}{\partial x_n})^2]^{\frac{1}{2}}$
 
-> If $R = Cx_1^2x_2^b \cdots x_n^N$  
+> If $R = Cx_1^ax_2^b \cdots x_n^N$  
 >
+> Taking the derivative wrt $x_n$ is the same as dividing it by $x_n$ in this case.
 > $$\frac{\partial R}{\partial x_1} = aCx_1^{a-1}x_2^b \cdots x_n^N = a\frac{R}{x^1}$$
 >
 > $$\frac{\partial R}{\partial x_2} = bCx_1^{a}x_2^{b-1} \cdots x_n^N  = b\frac{R}{x^2}$$
+>
+> Plugging in each partial derivative and factoring R out of each, and move to the RHS.
 > 
 > $$\frac{W_r}{R} = [( w_1 \cdot \frac{a}{x_1} )^2 + ( w_2 \cdot \frac{b}{x_2} )^2 + \cdots + ( w_n \cdot \frac{N}{x_n} )^2 ]^{\frac{1}{2}}$$

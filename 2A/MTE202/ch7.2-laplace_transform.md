@@ -68,7 +68,7 @@ $$
 
 ## Convolution
 
-> $$h(t) = (f * g)(t) = \int_{0}^{t} f(\tau)g(t-\tau)$$
+> $$h(t) = (f * g)(t) = \int_{0}^{t} f(\tau)g(t-\tau) d\tau$$
 
 ## Heaviside
 
