@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../../pandoc.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="../../flowchart.min.js"></script>
+</head>
+<body>
+<div id="TOC">
+<ul>
+<li><a href="#lecture-22---hypothesis-testing">Lecture 22 - Hypothesis Testing</a></li>
+<li><a href="#lecture-23---one-and-two-sided-hypothesis-tests">Lecture 23 - One and Two-sided Hypothesis Tests</a><ul>
+<li><a href="#two-sided-hypothesis-test">Two-Sided Hypothesis Test</a></li>
+<li><a href="#one-sided-hypothesis-test">One-Sided Hypothesis Test</a></li>
+</ul></li>
+<li><a href="#lecture-24">Lecture 24</a><ul>
+<li><a href="#probability-of-type-ii-error">Probability of Type II Error</a></li>
+</ul></li>
+<li><a href="#lecture-25">Lecture 25</a><ul>
+<li><a href="#how-parameters-effect-probability-of-type-i-and-ii-error">How parameters effect probability of Type I and II error</a></li>
+<li><a href="#type-i-and-ii-error-for-one-sided-tests">Type I and II error for One-Sided Tests</a></li>
+</ul></li>
+<li><a href="#lecture-26">Lecture 26</a><ul>
+<li><a href="#confidence-intervals">Confidence Intervals</a></li>
+</ul></li>
+<li><a href="#lecture-27">Lecture 27</a><ul>
+<li><a href="#testing-between-two-populations">Testing between two populations</a></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="lecture-22---hypothesis-testing">Lecture 22 - Hypothesis Testing</h1>
+<blockquote>
+<p><strong>Point Estimate</strong>:<br />
+if we can only choose one value to estimate the population mean, this is our best guess</p>
+<p><strong>Hypothesis Test</strong>:<br />
+Test hypothesis of a population parameter (mean, stdev., etc) using sample data</p>
+</blockquote>
+<blockquote>
+<p><strong>Null Hypothesis</strong>: The one skeptical and <strong>specific</strong> claim to be tested</p>
+<p><strong>Alternative Hypothesis</strong>: Alternative claim, usually means <span class="math inline">\(\to\)</span> all other possible values</p>
+</blockquote>
+<blockquote>
+<div class="figure">
+<img src="./res/type_I_II_error.jpg" id="id" class="class" width="300" />
+
+</div>
+</blockquote>
+<blockquote>
+<div class="figure">
+<img src="./res/accept_reject_hypothesis_region.jpg" />
+
+</div>
+</blockquote>
+<h1 id="lecture-23---one-and-two-sided-hypothesis-tests">Lecture 23 - One and Two-sided Hypothesis Tests</h1>
+<blockquote>
+<p>Steps:</p>
+<ol style="list-style-type: decimal">
+<li>State <span class="math inline">\(H_0, H_A\)</span></li>
+<li>Select test statistic</li>
+<li>Determine reject and non-reject reigons</li>
+<li>Calculate test statistic. Check which region it is in</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>Approach <strong>(1)</strong>:<br />
+Fixed <span class="math inline">\(\alpha\)</span> (significance leve/probability) value</p>
+<p>Approach <strong>(2)</strong>:<br />
+Variable <span class="math inline">\(p\)</span> value. <span class="math inline">\(p\)</span> is the probability <em><span class="math inline">\(H_0\)</span> is false, and parameter purely happened to be that certain value by <strong>chance</strong> </em></p>
+</blockquote>
+<h2 id="two-sided-hypothesis-test">Two-Sided Hypothesis Test</h2>
+<blockquote>
+<p><strong>Remember to make the opposite equality! <span class="math inline">\(H_0\)</span> should always be the claim!</strong></p>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\(H_0: \mu = \mu_0\)</span><br />
+<span class="math inline">\(H_A: \mu \neq \mu_0\)</span></p>
+<p>Reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(p &lt; \alpha\)</span></p>
+<div class="figure">
+<img src="./res/two-sided.jpg" />
+
+</div>
+</blockquote>
+<h2 id="one-sided-hypothesis-test">One-Sided Hypothesis Test</h2>
+<blockquote>
+<p><span class="math inline">\(H_0: \mu = \mu_0\)</span><br />
+<span class="math inline">\(H_A: \mu &lt; \mu_0\)</span></p>
+<p>Reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(p &lt; \alpha\)</span></p>
+<div class="figure">
+<img src="./res/left-side-test.jpg" />
+
+</div>
+</blockquote>
+<blockquote>
+<p><span class="math inline">\(H_0: \mu = \mu_0\)</span><br />
+<span class="math inline">\(H_A: \mu &gt; \mu_0\)</span></p>
+<p>Reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(p &lt; \alpha\)</span></p>
+<div class="figure">
+<img src="./res/right-side-test.jpg" />
+
+</div>
+</blockquote>
+<h1 id="lecture-24">Lecture 24</h1>
+<h2 id="probability-of-type-ii-error">Probability of Type II Error</h2>
+<blockquote>
+<div class="figure">
+<img src="./res/probability_of_type_II_error.jpg" />
+
+</div>
+</blockquote>
+<blockquote>
+<div class="figure">
+<img src="./res/delta.jpg" />
+
+</div>
+<p><span class="math display">\[\mu = \mu_0 + \delta\]</span></p>
+<p><span class="math display">\[
+\begin{align}
+Z &amp;= \frac{\overline{x} - \mu_0}{\sigma / \sqrt{n}}  \\
+&amp;= \frac{\mu_0 + \delta - \mu_0}{\sigma/\sqrt{n}}  \\
+&amp;= \frac{\delta \sqrt{n}}{\sigma}
+\end{align}
+\]</span></p>
+</blockquote>
+<blockquote>
+<p>To find <span class="math inline">\(\beta\)</span>, shift from truth to <span class="math inline">\(H_0\)</span> reference frame <span class="math display">\[\beta = P(-Z_{\alpha/2} - \frac{\delta \sqrt{n}}{\sigma} &lt; Z &lt; Z_{\alpha/2} - \frac{\delta \sqrt{n}}{\sigma} )\]</span> <img src="./res/find_beta.jpg" /></p>
+</blockquote>
+<blockquote>
+<p>Probability of Type I error is just <span class="math inline">\(\alpha\)</span></p>
+</blockquote>
+<h1 id="lecture-25">Lecture 25</h1>
+<h2 id="how-parameters-effect-probability-of-type-i-and-ii-error">How parameters effect probability of Type I and II error</h2>
+<blockquote>
+<p><span class="math inline">\(P(\text{Type I})\)</span> is reduced with:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\alpha \downarrow\)</span></li>
+<li>$n $</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\alpha \downarrow = \beta \uparrow\)</span></li>
+<li><span class="math inline">\(n \uparrow = \beta \downarrow , \alpha \downarrow\)</span> <strong>better</strong></li>
+</ol>
+</blockquote>
+<h2 id="type-i-and-ii-error-for-one-sided-tests">Type I and II error for One-Sided Tests</h2>
+<blockquote>
+<div class="figure">
+<img src="./res/left-one-sided.jpg" />
+
+</div>
+</blockquote>
+<blockquote>
+<div class="figure">
+<img src="./res/right-one-sided.jpg" />
+
+</div>
+</blockquote>
+<blockquote>
+<p>Solving for <span class="math inline">\(n\)</span> given <span class="math inline">\(\beta\)</span> <span class="math display">\[
+\begin{align}
+n &amp;= \frac{ (Z_{\beta} + Z_{\alpha/2})^2 \sigma^2 }{\delta^2} \tag{for two sided} \\
+n &amp;= \frac{ (Z_{\beta} + Z_{\alpha})^2 \sigma^2 }{\delta^2} \tag{for one sided}
+\end{align}\]</span></p>
+</blockquote>
+<h1 id="lecture-26">Lecture 26</h1>
+<h2 id="confidence-intervals">Confidence Intervals</h2>
+<blockquote>
+<p><strong>Confidence Level</strong>: <span class="math inline">\(1-\alpha\)</span></p>
+</blockquote>
+<h1 id="lecture-27">Lecture 27</h1>
+<h2 id="testing-between-two-populations">Testing between two populations</h2>
+<blockquote>
+<p>Comparing mean of two populations <span class="math inline">\(\mu_1, \mu_2\)</span><br />
+<span class="math inline">\(H_0: \mu_1 - \mu_2 = 0\)</span><br />
+<span class="math inline">\(H_A: \mu_1 - \mu_2 \neq 0\)</span><br />
+<span class="math display">\[Z = \frac{(\overline{x_1} - \overline{x_2}) - (\mu_1 - \mu_2)}{ \sqrt{ \frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2} } }\]</span></p>
+</blockquote>
+<p>If <span class="math inline">\(\sigma_1, \sigma_2\)</span> is unknown</p>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li>Case 1: <span class="math inline">\(\sigma_1 = \sigma_2 = \sigma\)</span> Can be used when <span class="math inline">\(\sigma\)</span> is actually unknown, just assume equal (when <span class="math inline">\(s_1 \approx s_2\)</span>). <span class="math display">\[
+\begin{align}
+T &amp;= \frac{ (\overline{x_1} - \overline{x_2}) - (\mu_1 - \mu_2) }{s_p \sqrt{1/n_1 + 1/n_2} }\\
+s_p &amp;= \sqrt{\frac{(n_1 - 1) \cdot s_1^2 + (n_2 - 1) \cdot s_2^2}{n_1 + n_2 - 2}} \\
+k &amp;= n_1 + n_2 -2 \tag{d.o.f.}
+\end{align}
+\]</span> where:<br />
+</li>
+</ol>
+<ul>
+<li><span class="math inline">\(s_p\)</span> is the pooled estimate (weighted avg.) of <span class="math inline">\(s_1, s_2\)</span></li>
+</ul>
+</blockquote>
+<blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>Case 2: <span class="math inline">\(\sigma_1 \neq \sigma_2\)</span> <span class="math inline">\(\sigma\)</span> are unknown and unequal.</li>
+</ol>
+<p><span class="math display">\[
+\begin{align}
+T^* &amp;= \frac{(\overline{x_1} - \overline{x_2}) - (\mu_1 - \mu_2)}{ \sqrt{ \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2} } } \tag{approx. t}\\
+k &amp;= \frac{( \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2} )^2 }{ \frac{ ( s_1^2 / n_1 )^2 }{ n_1 - 1 } + \frac{ ( s_2^2 / n_2 )^2 }{ n_2-1 } } \tag{round down}
+\end{align}
+\]</span></p>
+</blockquote>
+</body>
+</html>

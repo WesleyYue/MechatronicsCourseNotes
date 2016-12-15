@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../../pandoc.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="../../flowchart.min.js"></script>
+</head>
+<body>
+<div id="TOC">
+<ul>
+<li><a href="#taylor-series">Taylor Series</a></li>
+<li><a href="#power-series">Power Series</a></li>
+</ul>
+</div>
+<h1 id="taylor-series">Taylor Series</h1>
+<blockquote>
+<p><span class="math display">\[\sum_{n=0}^{\infty} \frac{f^{(n)}(x_0)}{n!} (x-x_0)^n\]</span></p>
+</blockquote>
+<blockquote>
+<p>Steps: Just keep looking for higher <span class="math inline">\(y^{(n)}(0)\)</span> values and then plug into taylor series</p>
+</blockquote>
+<h1 id="power-series">Power Series</h1>
+<blockquote>
+<p><span class="math display">\[
+\begin{align}
+f(x) &amp;= \sum_{n=0}^{\infty}a_n (x-x_0)^n \\
+\int f(x) &amp;= \sum_{n=0}^{\infty} \frac{a_n}{n+1} (x-x_0)^{n+1}\\
+f&#39;(x) &amp;= \sum_{n=1}^{\infty} n a_n (x-x_0)^{n-1}\\
+f&#39;&#39;(x) &amp;= \sum_{n=2}^{\infty} n(n-1)a_n(x-x_0)^{n-2}
+\end{align}
+\]</span></p>
+</blockquote>
+<blockquote>
+<p>Radius of convergence <span class="math display">\[\lim_{n\to\infty} |\frac{a_n}{a_{n+1}}| = R\]</span></p>
+</blockquote>
+<blockquote>
+<p>To use power series on <span class="math display">\[p(x)y&#39;&#39; + q(x)y&#39; + r(x)y = 0\]</span> <span class="math inline">\(x_0\)</span> needs to be an <em>ordinary point</em>, where <span class="math inline">\(p(x_0) \neq 0\)</span></p>
+</blockquote>
+<blockquote>
+<p>Steps:<br />
+1. Put <span class="math inline">\(y\)</span> in terms of power series<br />
+2. Massage power series to have the same <span class="math inline">\(x\)</span> exponents by shifting index<br />
+3. Simplify<br />
+4. Find equality for every piece of added component<br />
+5. Find <span class="math inline">\(a_n\)</span> for the first few<br />
+6. Look for pattern</p>
+</blockquote>
+</body>
+</html>
