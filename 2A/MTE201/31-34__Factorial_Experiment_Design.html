@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../../pandoc.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="../../flowchart.min.js"></script>
+</head>
+<body>
+<div id="TOC">
+<ul>
+<li><a href="#lecture-31">Lecture 31</a><ul>
+<li><a href="#k-factorial-experiments"><span class="math inline">\(2^k\)</span> Factorial Experiments</a></li>
+<li><a href="#contrast-table">Contrast Table</a></li>
+<li><a href="#testing-if-effect-is-significant">Testing if effect is significant</a><ul>
+<li><a href="#hypothesis-testing">1. Hypothesis Testing</a></li>
+<li><a href="#confidence-interval">2. Confidence Interval</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#lecture-33">Lecture 33</a><ul>
+<li><a href="#factorial-design"><span class="math inline">\(2^3\)</span> Factorial Design</a></li>
+</ul></li>
+<li><a href="#lecture-34">Lecture 34</a><ul>
+<li><a href="#response-surface-methods">Response Surface Methods</a></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="lecture-31">Lecture 31</h1>
+<h2 id="k-factorial-experiments"><span class="math inline">\(2^k\)</span> Factorial Experiments</h2>
+<blockquote>
+<div class="figure">
+<img src="./res/factorial_effects.jpg" />
+
+</div>
+</blockquote>
+<h2 id="contrast-table">Contrast Table</h2>
+<blockquote>
+<div class="figure">
+<img src="./res/contrast_table.jpg" />
+
+</div>
+</blockquote>
+<blockquote>
+<p>Main Effect: <span class="math display">\[
+\begin{align}
+A &amp;= \frac{[a + ab - b - (1)]}{2n} \\
+B &amp;= \frac{[b + ab - a - (1)]}{2n}
+\end{align}
+\]</span> Interaction Effect: <span class="math display">\[AB = \frac{[ab + (1) - a - b]}{2n}\]</span> <small>Get the signs from the contrast table.</small></p>
+</blockquote>
+<h2 id="testing-if-effect-is-significant">Testing if effect is significant</h2>
+<blockquote>
+<p>Approaches: 1. Hypothesis Testing 2. Confidence Interval</p>
+</blockquote>
+<blockquote>
+<p>Standard Error of Effects <span class="math display">\[S_e = \sqrt{\frac{ \hat{\sigma}^2 }{ n \cdot 2^{k-2} }}\]</span></p>
+</blockquote>
+<blockquote>
+<p><span class="math display">\[
+\begin{align}
+\hat{\sigma}^2 &amp;= \frac{ \sum_{i=1}^{2^k} \hat{\sigma_i}^2 }{2^k} \\
+\hat{\sigma_i}^2 &amp;= \frac{ \sum_{j=1}^{n} (y_{i,j} - \overline{y_i})^2 }{ n - 1 }
+\end{align}
+\]</span> where:</p>
+<ul>
+<li><span class="math inline">\(\hat{\sigma}^2\)</span>: Average of variances for each treatment<br />
+</li>
+<li><span class="math inline">\(\hat{\sigma_i}^2\)</span>: Variance at each treatment</li>
+</ul>
+</blockquote>
+<h3 id="hypothesis-testing">1. Hypothesis Testing</h3>
+<blockquote>
+<p><span class="math inline">\(H_0: Effect = 0\)</span><br />
+<span class="math inline">\(H_A: Effect \neq 0\)</span><br />
+Use t distribution since <span class="math inline">\(\sigma^2\)</span> is unknown <span class="math display">\[
+\begin{align}
+t_{\text{ratio}} &amp;= \frac{\text{effect}}{S_e(\text{effects})} \\
+k &amp;= 2^K (n-1) \tag{d.o.f.}
+\end{align}
+\]</span></p>
+</blockquote>
+<h3 id="confidence-interval">2. Confidence Interval</h3>
+<blockquote>
+<p><span class="math display">\[\text{effect} \pm 2 \cdot S_e(\text{effects}) \tag{\approx 95% C.I.}\]</span> If the 95% CI contains zero, effect is not significant</p>
+</blockquote>
+<h1 id="lecture-33">Lecture 33</h1>
+<h2 id="factorial-design"><span class="math inline">\(2^3\)</span> Factorial Design</h2>
+<blockquote>
+<div class="figure">
+<img src="./res/2%5E3_contrast_table.jpg" alt="2^3 contrast table" />
+<p class="caption"><span class="math inline">\(2^3\)</span> contrast table</p>
+</div>
+</blockquote>
+<blockquote>
+<p><span class="math display">\[A = \frac{[\text{contrast}]}{4n}\]</span> Note effects are divided by <strong>4</strong>n now.</p>
+</blockquote>
+<h1 id="lecture-34">Lecture 34</h1>
+<h2 id="response-surface-methods">Response Surface Methods</h2>
+<blockquote>
+<p><span class="math display">\[Y = \overline{y} + (\frac{A}{2})x_1 + (\frac{B}{2})x_2 + (\frac{AB}{2})x_1 x_2\]</span> <img src="./res/response_surface_contour.jpg" /></p>
+<div class="figure">
+<img src="./res/response_surface_3d.jpg" />
+
+</div>
+</blockquote>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li>Reduce response surface to 1st order by removing interaction term</li>
+<li>Go orthogonal to contour lines (orthogonal to response equation without interaction term) <img src="./res/response_surface_1st_order.jpg" /></li>
+</ol>
+</blockquote>
+</body>
+</html>

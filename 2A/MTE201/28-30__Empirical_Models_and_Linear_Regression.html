@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../../pandoc.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="../../flowchart.min.js"></script>
+</head>
+<body>
+<div id="TOC">
+<ul>
+<li><a href="#lecture-28">Lecture 28</a><ul>
+<li><a href="#linear-regression">Linear Regression</a></li>
+<li><a href="#statistical-model-for-linear-regression">Statistical Model for Linear Regression</a></li>
+<li><a href="#evaluating-linear-regression-fit">Evaluating Linear Regression Fit</a></li>
+</ul></li>
+<li><a href="#lecture-29">Lecture 29</a><ul>
+<li><a href="#standard-error-of-estimators-approach">Standard Error of Estimators Approach</a></li>
+<li><a href="#confidence-interval-of-a-point">Confidence Interval of a Point</a></li>
+<li><a href="#prediction-interval">Prediction Interval</a></li>
+</ul></li>
+<li><a href="#lecture-30">Lecture 30</a><ul>
+<li><a href="#anova-approach">ANOVA Approach</a></li>
+<li><a href="#coefficient-of-determination-r2">Coefficient of Determination (<span class="math inline">\(r^2\)</span>)</a></li>
+<li><a href="#sample-correlation-coefficient-r">Sample Correlation Coefficient (<span class="math inline">\(r\)</span>)</a></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="lecture-28">Lecture 28</h1>
+<h2 id="linear-regression">Linear Regression</h2>
+<blockquote>
+<p><span class="math display">\[
+\begin{align}
+\hat{y} &amp;= a + bx_i \\
+e_i &amp;= y_i - \hat{y_i}
+\end{align}
+\]</span> where:</p>
+<ul>
+<li><span class="math inline">\(y_i\)</span>: observed value<br />
+</li>
+<li><span class="math inline">\(\hat{y_i}\)</span>: predicted value</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><span class="math display">\[
+\begin{align}
+b &amp;= \frac{S_{xy}}{S_{xx}} \\
+&amp;= \frac{ \sum_{i=1}^{n} (x_i - \overline{x})(y_i - \overline{y}) }{ \sum_{i=1}^{n} (x_i - \overline{x})^2 }
+\end{align}
+\]</span> For hand calculations: <span class="math display">\[
+\begin{align}
+S_{xy} &amp;= \sum_{i=1}^{n} x_i y_i - \frac{ \sum x_i \sum y_i }{n} \\
+S_{yy} &amp;= \sum_{i=1}^{n} x_i^2 - \frac{\sum x_i \sum x_i}{n} 
+\end{align}
+\]</span> . <span class="math display">\[
+a = \overline{y} - b \overline{x}
+\]</span></p>
+</blockquote>
+<h2 id="statistical-model-for-linear-regression">Statistical Model for Linear Regression</h2>
+<blockquote>
+<div class="figure">
+<img src="./res/sampling_distribution_linear_regression.jpg" />
+
+</div>
+</blockquote>
+<blockquote>
+<p><span class="math display">\[Y_i = \alpha + \beta x_i + \epsilon_i\]</span></p>
+</blockquote>
+<h2 id="evaluating-linear-regression-fit">Evaluating Linear Regression Fit</h2>
+<blockquote>
+<p>Conduct hypothesis test with:<br />
+<span class="math inline">\(H_0: \beta = 0\)</span><br />
+<span class="math inline">\(H_A: \beta \neq 0\)</span><br />
+<img src="./res/variance_from_slope.jpg" /></p>
+</blockquote>
+<h1 id="lecture-29">Lecture 29</h1>
+<h2 id="standard-error-of-estimators-approach">Standard Error of Estimators Approach</h2>
+<blockquote>
+<p>To test <span class="math inline">\(H_0\)</span>, use the following t-distribution <span class="math display">\[
+\begin{align}
+T &amp;= \frac{b - \beta}{S_e / \sqrt{S_{xx}}} \\
+S_{xx} &amp;= \sum_{i=1}^{n}(x_i - \overline{x})^2
+\end{align}
+\]</span> where:</p>
+<ul>
+<li><span class="math inline">\(S_{xx}\)</span>: sums of squares</li>
+<li><span class="math inline">\(S_e\)</span>: standard error</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><span class="math display">\[
+\begin{align}
+S_e &amp;= \sqrt{\hat{\sigma}^2} \\
+\hat{\sigma}^2 &amp;= \frac{ \sum_{i = 1}^n (y_i - (a + bx_i) )^2 }{n-2}
+\end{align}
+\]</span></p>
+</blockquote>
+<h2 id="confidence-interval-of-a-point">Confidence Interval of a Point</h2>
+<blockquote>
+<p>A 95% confidence interval will contain the <strong>true</strong> parameter with a probability of 0.95. <span class="math display">\[\pm t_{\alpha/2, n-2} \cdot S_e \sqrt{ \frac{1}{n} + \frac{ (x_0 - \overline{x})^2 }{S_{xx}} }\]</span> <small><span class="math inline">\(x_0\)</span> is the first (lowest) value</small> <img src="./res/ci_graph.jpg" /></p>
+</blockquote>
+<h2 id="prediction-interval">Prediction Interval</h2>
+<blockquote>
+<p>What is the interval that will capture <span class="math inline">\(x\)</span>% of <strong>future, unobserved</strong> variable at that point? <span class="math display">\[\pm t_{\alpha/2, n-2} \cdot S_e \sqrt{ 1 + \frac{1}{n} +  \frac{ (x_0 - \overline{x})^2 }{S_{xx}} }\]</span> <img src="./res/ci_pi_graph.jpg" /></p>
+</blockquote>
+<blockquote>
+<div class="figure">
+<embed src="http://www.cs.wayne.edu/~hzhang/courses/7290/Lectures/11%20-%20Simple%20Linear%20Regression%20Models.pdf" />
+<p class="caption">More in depth explaination of CI and PI</p>
+</div>
+</blockquote>
+<h1 id="lecture-30">Lecture 30</h1>
+<h2 id="anova-approach">ANOVA Approach</h2>
+<blockquote>
+<p><span class="math display">\[
+\begin{align}
+SS_T &amp;= \sum_{i=1}^{n} (y_i - \overline{y})^2 \\
+&amp;= \underbrace{\sum_{i=1}^{n} (\hat{y_i} - \overline{y})^2}_{SS_R} + \underbrace{\sum_{i=1}^{n} (y_i - \hat{y_i})^2}_{SS_E}
+\end{align}
+\]</span> where:</p>
+<ul>
+<li><span class="math inline">\(SS_T\)</span>(<strong>Total Sums of Squares</strong>): Error in prediction if <span class="math inline">\(\overline{y}\)</span> is used. (<span class="math inline">\(=S_{yy}\)</span>)<br />
+</li>
+<li><span class="math inline">\(SS_R\)</span>(<strong>Regression Sums of Squares</strong>): Portion of total error explained by regression model.<br />
+</li>
+<li><span class="math inline">\(SS_E\)</span>(<strong>Error Sums of Squares</strong>): Error in prediciton if predictor is used. <img src="./res/SS_T_R_E.jpg" /></li>
+</ul>
+</blockquote>
+<h2 id="coefficient-of-determination-r2">Coefficient of Determination (<span class="math inline">\(r^2\)</span>)</h2>
+<blockquote>
+<p><span class="math display">\[
+\begin{align}
+R^2 &amp;= \frac{SS_R}{SS_T} \\
+&amp;= \frac{SS_T - SS_E}{SS_T} \\
+&amp;= 1 - \frac{SS_E}{SS_T}
+\end{align}
+\]</span> The closer <span class="math inline">\(R^2\)</span> is to 1, the better the fit.</p>
+</blockquote>
+<h2 id="sample-correlation-coefficient-r">Sample Correlation Coefficient (<span class="math inline">\(r\)</span>)</h2>
+<blockquote>
+<p><span class="math display">\[
+\begin{align}
+r &amp;= \frac{1}{n-1} \sum \frac{(x_i - \overline{x})}{S_x} \cdot \frac{(y_i - \overline{y})}{S_y} \\
+&amp;= \frac{ S_{xy} }{ \sqrt{S_{xx} S_{yy}} }
+\end{align}
+\]</span></p>
+</blockquote>
+</body>
+</html>
